@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 25 – Global Problems</title>
+<style>
+  :root{
+    --bg: #f4f6f8;
+    --slide-bg: #ffffff;
+    --text: #1f2937;
+    --heading: #0f3d5c;
+    --accent: #1f7a5c;
+    --accent-bg: #e6f2ee;
+    --muted: #5b6672;
+    --border: #dfe4e8;
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: "Georgia", "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .deck{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .slide{
+    display:none;
+    width:min(900px, 92vw);
+    height:min(620px, 88vh);
+    background: var(--slide-bg);
+    border-radius:14px;
+    box-shadow: 0 10px 30px rgba(15,61,92,0.12);
+    padding: 48px 56px;
+    overflow-y:auto;
+    flex-direction:column;
+  }
+  .slide.active{display:flex;}
+  .eyebrow{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:13px;
+    color: var(--accent);
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  h1{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size:36px;
+    color: var(--heading);
+    margin:0 0 6px 0;
+    line-height:1.2;
+  }
+  h2{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size:26px;
+    color: var(--heading);
+    margin:0 0 18px 0;
+    border-bottom: 3px solid var(--accent-bg);
+    padding-bottom:12px;
+  }
+  .subtitle{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: var(--muted);
+    font-size:17px;
+    margin-bottom: 20px;
+  }
+  p{
+    font-size:19px;
+    line-height:1.65;
+    margin: 0 0 16px 0;
+  }
+  .term{
+    color: var(--accent);
+    font-weight:700;
+  }
+  .title-slide{
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .title-slide h1{
+    font-size:44px;
+  }
+  .title-slide .divider{
+    width:70px;
+    height:4px;
+    background: var(--accent);
+    margin: 22px auto;
+    border-radius:2px;
+  }
+  .closing-note{
+    margin-top:auto;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size:15px;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top:14px;
+  }
+  .nav{
+    position:fixed;
+    bottom:22px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    gap:18px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: rgba(255,255,255,0.9);
+    padding:10px 18px;
+    border-radius:30px;
+    box-shadow: 0 4px 14px rgba(15,61,92,0.15);
+  }
+  .nav button{
+    border:none;
+    background: var(--heading);
+    color:white;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    font-size:18px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: background 0.2s;
+  }
+  .nav button:hover{ background: var(--accent); }
+  .nav button:disabled{
+    background:#c7cdd3;
+    cursor:default;
+  }
+  .counter{
+    font-size:14px;
+    color: var(--muted);
+    min-width:50px;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<div class="deck">
+
+  <!-- Slide 1: Title -->
+  <div class="slide active title-slide">
+    <div class="eyebrow">Reading</div>
+    <h1>Lesson 25 – Global Problems</h1>
+    <div class="divider"></div>
+    <p class="subtitle">Major Global Problems</p>
+    <p style="max-width:600px; margin:0 auto;">Today, we face a number of serious global problems that affect people, animals, and the environment. Some of these problems are closely <span class="term">connected</span>, meaning that one problem can make another problem worse.</p>
+  </div>
+
+  <!-- Slide 2: Environmental Problems I -->
+  <div class="slide">
+    <div class="eyebrow">Section 1</div>
+    <h2>Environmental Problems</h2>
+    <p>One of the most critical global issues is <span class="term">preserving</span> and <span class="term">protecting</span> the environment. For many years, humans have depended heavily on <span class="term">fossil fuels</span>, such as oil, coal, and natural gas. However, burning fossil fuels produces <span class="term">greenhouse gases</span>, which trap heat in the atmosphere and contribute to <span class="term">global warming</span> and <span class="term">climate change</span>.</p>
+    <p><span class="term">Climate change</span> refers to long-term changes in the Earth's temperature and weather patterns. As global temperatures rise, many regions experience changes in rainfall, rising sea levels, and more extreme weather events.</p>
+  </div>
+
+  <!-- Slide 3: Environmental Problems II -->
+  <div class="slide">
+    <div class="eyebrow">Section 1 (continued)</div>
+    <h2>The Cost of Environmental Damage</h2>
+    <p>Some scientists believe that humans have already caused <span class="term">irreparable damage</span> to the planet. In other words, some environmental damage may be impossible to completely reverse. We are already seeing serious consequences, including rising sea levels and increasingly frequent natural disasters such as hurricanes and tornadoes.</p>
+    <p>The natural world is also suffering. Some animal species have become <span class="term">extinct</span>, while many others are <span class="term">endangered</span> and at risk of disappearing. To address these problems, countries need to invest in <span class="term">clean energy</span> and <span class="term">renewable resources</span> such as solar, wind, and water power. Governments and companies should also develop manufacturing methods that do not harm the environment.</p>
+  </div>
+
+  <!-- Slide 4: Poverty and Hunger -->
+  <div class="slide">
+    <div class="eyebrow">Section 2</div>
+    <h2>Poverty and Hunger</h2>
+    <p>Environmental problems are not the only major challenges facing the world. <span class="term">Extreme poverty</span> is still common in many developing countries, particularly in rural areas.</p>
+    <p>In some regions, children die of <span class="term">hunger</span> or <span class="term">starvation</span> because they do not have enough food. Many communities also experience serious food shortages and lack access to clean and safe drinking water.</p>
+  </div>
+
+  <!-- Slide 5: Poverty in cities -->
+  <div class="slide">
+    <div class="eyebrow">Section 2 (continued)</div>
+    <h2>Poverty in Cities and Society</h2>
+    <p>Poverty can affect people's lives in cities as well as rural areas. When there are not enough <span class="term">homeless shelters</span>, homeless people may have no choice but to sleep on the streets.</p>
+    <p>There are also many families living <span class="term">on the margins of society</span>. These families may be socially or economically disadvantaged and may live <span class="term">below the poverty line</span>. As a result, they often struggle to <span class="term">make ends meet</span>, meaning that they have difficulty paying for basic necessities such as food, housing, and healthcare.</p>
+    <p>Many governments have created <span class="term">welfare programs</span> to help people in difficult financial situations and to alleviate poverty. However, the growing gap between rich and poor suggests that completely eradicating poverty may be extremely difficult.</p>
+  </div>
+
+  <!-- Slide 6: Problems connected to poverty -->
+  <div class="slide">
+    <div class="eyebrow">Section 3</div>
+    <h2>Problems Connected to Poverty</h2>
+    <p>Poverty and underdevelopment can contribute to many other serious problems. For example, people in poor communities may die from <span class="term">preventable diseases</span> because they do not have access to safe and effective vaccines or medical treatment.</p>
+    <p>Poverty can also contribute to <span class="term">child labor</span>. Some large corporations have been criticized for using children to manufacture products. In extremely poor families, parents may feel that they have no other option but to send their children to work so that the family can survive.</p>
+  </div>
+
+  <!-- Slide 7: Human trafficking -->
+  <div class="slide">
+    <div class="eyebrow">Section 3 (continued)</div>
+    <h2>Human Trafficking</h2>
+    <p>Another serious problem is <span class="term">human trafficking</span>. Young women from disadvantaged backgrounds can be particularly <span class="term">vulnerable</span> to trafficking and sexual exploitation because they may have limited financial opportunities and support.</p>
+  </div>
+
+  <!-- Slide 8: A connected global problem -->
+  <div class="slide">
+    <div class="eyebrow">Section 4</div>
+    <h2>A Connected Global Problem</h2>
+    <p>These problems are not separate from one another. Climate change can affect agriculture, which can lead to food shortages. Food shortages can increase poverty, while poverty can make people more vulnerable to disease, exploitation, and other social problems.</p>
+    <p>For this reason, solving global problems requires <span class="term">cooperation</span> between governments, businesses, scientists, and ordinary citizens. Protecting the environment, reducing poverty, improving healthcare, and creating better economic opportunities are all important parts of building a healthier and more sustainable future.</p>
+    <div class="closing-note">End of Lesson 25 – Global Problems</div>
+  </div>
+
+</div>
+
+<div class="nav">
+  <button id="prevBtn" onclick="changeSlide(-1)">&#8592;</button>
+  <span class="counter"><span id="current">1</span> / <span id="total">8</span></span>
+  <button id="nextBtn" onclick="changeSlide(1)">&#8594;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let idx = 0;
+  document.getElementById('total').textContent = slides.length;
+
+  function showSlide(i){
+    slides[idx].classList.remove('active');
+    idx = (i + slides.length) % slides.length;
+    slides[idx].classList.add('active');
+    document.getElementById('current').textContent = idx + 1;
+    document.getElementById('prevBtn').disabled = idx === 0;
+    document.getElementById('nextBtn').disabled = idx === slides.length - 1;
+  }
+
+  function changeSlide(dir){
+    const next = idx + dir;
+    if(next < 0 || next >= slides.length) return;
+    showSlide(next);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowRight') changeSlide(1);
+    if(e.key === 'ArrowLeft') changeSlide(-1);
+  });
+
+  showSlide(0);
+</script>
+
+</body>
+</html>
